@@ -4,27 +4,23 @@
   flex-direction: row;
   /* Cross Axis */
   justify-content: space-around;
-  height: 100vh;
+  align-content: space-around;
+  height: 200vh;
   font-size: 50px;
+  /* flex-wrap: nowrap 이 default
+    모든 컨텐츠를 inline에 유지 
+    :wrap 은 child의 크기를 유지*/
+  flex-wrap: wrap;
 }
 
 .child {
+  /* flexbox 는 width 설정에 신경안쓰고 inline으로 
+    모든컨텐츠를 꾸겨넣음 */
   width: 100px;
   height: 100px;
   background: peru;
   color: #fff;
-}
-
-/* father에 height를 주어야 함
-    child에게 줄 수 있는 프로퍼티 
-    - align-self : cross axis에서만 부모속성 align-items와 같다.
-    - order  : 0부터시작
-    html을 통해 순서를 바꾸기 힘들 때 사용 */
-.child:nth-child(1) {
-  order: 2;
-  align-self: center;
-}
-
-.child:nth-child(3) {
-  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
