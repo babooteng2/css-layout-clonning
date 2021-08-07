@@ -10,8 +10,6 @@
 }
 
 .child {
-  /* 빈공간이 나뉘기 전에 값을 정함 - 
-    main axis(flex-direction)에따라 width or height 정해짐 */
   flex-basis: 30%;
   height: 100px;
   background: peru;
@@ -25,3 +23,5 @@
   background: #000;
   flex-grow: 1;
 }
+
+/* play https://flexboxfroggy.com/ */
