@@ -1,18 +1,27 @@
-.father {
+.grid {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
-  grid-template-rows: 50px 100px 50px;
-  /* column-gap: 10px;
-  row-gap: 10px; */
-  gap: 10px;
+  grid-template-columns: auto 200px;
+  grid-template-rows: 100px repeat(2, 100px) 100px;
+  grid-template-areas:
+    "header header header header"
+    "nav content content content"
+    "nav content content content"
+    "footer footer footer footer";
 }
 
-.child {
-  flex-basis: 30%;
-  background: peru;
-  color: #fff;
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header {
+  background: #2ecc71;
+  grid-area: header;
+}
+.content {
+  background: #3498db;
+  grid-area: content;
+}
+.nav {
+  background: #8e44ad;
+  grid-area: nav;
+}
+.footer {
+  background: #e5274e;
+  grid-area: footer;
 }
