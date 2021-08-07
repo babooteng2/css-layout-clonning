@@ -1,21 +1,18 @@
 .father {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-template-rows: 50px 100px 50px;
+  /* column-gap: 10px;
+  row-gap: 10px; */
+  gap: 10px;
 }
 
 .child {
-  flex-basis: 33%;
+  flex-basis: 30%;
   background: peru;
   color: #fff;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.child:nth-child(4) {
-  margin-top: 10px;
-}
-
-/* 위와같이 flexbox를 사용하면 box를 옆으로두기
-  가운데 두기, 좌우나누기 등은 쉬운데 grid 형태 만들기가 어려움 */
