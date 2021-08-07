@@ -1,34 +1,33 @@
 .grid {
   display: grid;
-  height: 100vh;
-  /* fraction 은 공간을 가질 수 있을 만큼 가짐 */
-  /* grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr); */
-  grid-template:
-    /* "header header header header" 1fr
-    "content content content nav" 2fr
-    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr; */
-    /* 1fr(width) / 1fr ... (height) 
-      grid-template에서는 repeat()이 적용되지 않음*/
-    [header-start] "header header header header" 1fr [header-end]
-    [content-start] "content content content nav" 2fr [content-end]
-    [footer-start] "footer footer footer footer" 1fr [footer-end] / 1fr 1fr 1fr 1fr;
   gap: 10px;
+  height: 50vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* default - justify-items: stretch */
+  /* align-items: stretch;
+  justify-items: center; */
+  /* shortcut - vertical and horizontal */
+  place-items: stretch center;
 }
 
 .header {
   background: #2ecc71;
-  grid-area: header;
+  height: 40px;
+  width: 40px;
 }
 .nav {
   background: #8e44ad;
-  grid-area: nav;
+  height: 40px;
+  width: 40px;
 }
 .content {
   background: #3498db;
-  grid-area: content;
+  height: 40px;
+  width: 40px;
 }
 .footer {
   background: #e5274e;
-  grid-area: footer;
+  height: 40px;
+  width: 40px;
 }
