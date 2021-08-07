@@ -1,19 +1,15 @@
+/* 요소들을 제어하려면 감싸줘야함.
+    (부모가 flex container) 
+    그리고 바로 붙어있는 부모만 자식을 움직일 수 있음
+    중간에 무엇이 끼면 안됨)
+    flex는 inline의 성격을 가짐 */
+.wrapper {
+  display: flex;
+}
+
 .box {
-  background: blue;
-  width: 150px;
-  height: 150px;
-  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background: peru;
   color: #fff;
-}
-
-/* i wanna move this to the center.. but some problem.
-    we need to know why flexbox created.
-*/
-
-.box:nth-child(2) {
-  margin-left: 10px;
-}
-
-.box:nth-child(3) {
-  margin-left: 20px;
 }
