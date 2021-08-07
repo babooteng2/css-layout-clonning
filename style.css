@@ -1,0 +1,19 @@
+.box {
+  background: blue;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  color: #fff;
+}
+
+/* i wanna move this to the center.. but some problem.
+    we need to know why flexbox created.
+*/
+
+.box:nth-child(2) {
+  margin-left: 10px;
+}
+
+.box:nth-child(3) {
+  margin-left: 20px;
+}
