@@ -2,11 +2,13 @@
   color: white;
   display: grid;
   gap: 5px;
-  height: 50vh;
-  flex-direction: row;
-  /* grid-template-columns: repeat(5, 100px); */
-  grid-template-rows: repeat(5, 100px);
-  grid-auto-flow: 100px;
+  /*max-content: box를 컨텐츠가 커질 수 있을 만큼 커짐 
+    min-content: box를 컨텐츠가 작아질 수 있을 만큼 작아짐 */
+  /* grid-template-columns: max-content min-content; */
+  /* grid-template-columns: repeat(5, minmax(min-content, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
 }
 
 .item:nth-child(odd) {
@@ -14,12 +16,4 @@
 }
 .item:nth-child(even) {
   background: #8e44ad;
-}
-.grid:nth-child(odd) {
-  /* 빈공간이 같은 엘리먼트로 갯수를 늘려 채워짐 */
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-}
-.grid:nth-child(even) {
-  /* 빈공간이 엘리먼트로 stretch로채워짐 */
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
